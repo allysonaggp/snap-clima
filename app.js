@@ -23,6 +23,11 @@ searchBtn.addEventListener("click", (e) => {
     showWeatherData(city);
  });
 
+ navigator.geolocation.getCurrentPosition((city) => {
+    console.log(city);
+  })
+  
+
 //função
 const getWeatherData = async (city) => 
 {
@@ -44,7 +49,7 @@ const showWeatherData = async (city) =>
     cityElement.innerText = data.name;
     tempElement.innerText = `${Math.round(data.main.temp)}°C`;
     discElement.innerText = data.weather[0].description;
-    weatherIconElement.setAttribute("src",`assets/${data.weather[0].icon}.svg`);
+    weatherIconElement.setAttribute("src",` assets/${data.weather[0].icon}.svg`);
     umidityElement.innerText = `${data.main.humidity}%`;
     windElement.innerText = `${Math.round(data.wind.speed)} Km/h`;
     tempSenseElement.innerText = `${Math.round(data.main.feels_like)}°C`;
