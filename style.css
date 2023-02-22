@@ -89,7 +89,7 @@ filter: brightness(1.25);
 }
 
 .current-temperature__weather-icon{
-    width: 125px;
+    width: 100px;
     margin-top: 20px;
 }
 
@@ -125,7 +125,7 @@ filter: brightness(1.25);
 
 .temperature-detail{
     display: flex;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .temperature-detail__item{
@@ -152,7 +152,7 @@ filter: brightness(1.25);
 
 .sunset-sunrise{
     display: flex;
-    margin: 30px auto;
+    margin: 20px auto;
 }
 
 .sunset-sunrise__item{
