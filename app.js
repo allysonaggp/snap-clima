@@ -14,6 +14,11 @@ const tempSenseElement = document.querySelector("#feels-like-temperature");
 const sunriseElement = document.querySelector("#sunset-time");
 const sunsetElement = document.querySelector("#sunrise-time");
 
+//tentar faze5r consuta pela geolocalização
+
+//navigator.geolocation.getCurrentPosition((position) => {
+//    showWeatherData(city);
+//  })
 
 searchBtn.addEventListener("click", (e) => {
     e.preventDefault();
@@ -23,9 +28,8 @@ searchBtn.addEventListener("click", (e) => {
     showWeatherData(city);
  });
 
- navigator.geolocation.getCurrentPosition((city) => {
-    console.log(city);
-  })
+ 
+
   
 
 //função
@@ -54,7 +58,7 @@ const showWeatherData = async (city) =>
     windElement.innerText = `${Math.round(data.wind.speed)} Km/h`;
     tempSenseElement.innerText = `${Math.round(data.main.feels_like)}°C`;
     sunriseElement.innerText = formatTime(data.sys.sunrise);
-    sunsetElement.innerText = formatTime(data.sys.sunrise);
+    sunsetElement.innerText = formatTime(data.sys.sunset);
     
 };
 
